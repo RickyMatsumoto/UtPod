@@ -5,10 +5,10 @@
 # Ideally, one target for every object file and a target for final binary. 
 
 final: UtPodDriver.o UtPod.o Song.o
-	g++ -otest UtPodDriver.o UtPod.o Song.o
+	g++ -otest -std=c++0x UtPodDriver.o UtPod.o Song.o
 driver: UtPodDriver.cpp UtPod.h Song.h
-	g++ -c UtPodDriver.cpp
+	g++ -c -std=c++0x UtPodDriver.cpp
 UtPod.o: UtPod.cpp UtPod.h Song.h
-	g++ -c UtPod.cpp
+	g++ -c -std=c++0x UtPod.cpp
 Song.o: Song.cpp Song.h
-	g++ -c Song.cpp
+	g++ -c -std=c++0x Song.cpp
